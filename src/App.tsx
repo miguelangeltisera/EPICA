@@ -6,6 +6,7 @@
 import { useState, useEffect } from 'react';
 import { auth } from './firebase';
 import { signInWithPopup, GoogleAuthProvider, signOut, User } from 'firebase/auth';
+import epicaLogo from './assets/images/epica_logo_1780504772767.png';
 
 export default function App() {
   const [user, setUser] = useState<User | null>(null);
@@ -26,24 +27,35 @@ export default function App() {
     await signOut(auth);
   };
 
-  return (
-    <div className="min-h-screen bg-gray-50 p-8">
-      <header className="flex justify-between items-center mb-8">
-        <h1 className="text-3xl font-bold text-gray-900">ÉPICA</h1>
-        {user ? (
+  if (user) {
+    return (
+      <div className="min-h-screen bg-gray-50 p-8">
+        <header className="flex justify-between items-center mb-8">
+          <h1 className="text-3xl font-bold text-gray-900">ÉPICA</h1>
           <button onClick={logout} className="px-4 py-2 bg-gray-200 rounded">Cerrar sesión</button>
-        ) : (
-          <button onClick={login} className="px-4 py-2 bg-blue-600 text-white rounded">Iniciar sesión</button>
-        )}
-      </header>
-      {user ? (
+        </header>
         <div>
           <h2 className="text-xl">Bienvenido, {user.displayName}</h2>
           {/* Main content will go here */}
         </div>
-      ) : (
-        <p>Inicia sesión para comenzar.</p>
-      )}
+      </div>
+    );
+  }
+
+  return (
+    <div className="min-h-screen bg-white flex flex-col items-center justify-center p-8 text-center">
+      <img src={epicaLogo} alt="ÉPICA Logo" className="w-64 mb-8" />
+      <h1 className="text-5xl font-bold text-gray-900 mb-4">ÉPICA</h1>
+      <p className="text-xl text-gray-600 mb-8 max-w-2xl">
+        Escuela de Producción e Investigación de la Ciencia Audiovisual. 
+        Transforma tu aprendizaje con un ecosistema interactivo asistido por IA.
+      </p>
+      <button 
+        onClick={login} 
+        className="px-8 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition"
+      >
+        Iniciar sesión con Google
+      </button>
     </div>
   );
 }
