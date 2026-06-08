@@ -410,8 +410,13 @@ export default function App() {
       {/* ========================================================
           BARRA DE NAVEGACIÓN DE ALTO NIVEL
          ======================================================== */}
-      <header id="landing-header" className="sticky top-0 z-50 border-b border-white/5 bg-[#07070a]/80 backdrop-blur-md px-6 py-4">
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
+      <header id="landing-header" className="sticky top-0 z-50 border-b border-white/5 bg-[#07070a]/80 backdrop-blur-md">
+        <div className="bg-neon-cyan/10 px-6 py-1 text-center">
+          <p className="text-[10px] font-mono text-neon-cyan tracking-wider font-bold">
+            Creado por Miguelangel Tisera | Desarrollado por Cine & Tv Mat Hypermedia C.A.
+          </p>
+        </div>
+        <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-neon-cyan to-neon-purple p-0.5 flex items-center justify-center shadow-[0_0_15px_rgba(6,182,212,0.3)]">
               <div className="w-full h-full bg-[#07070a] rounded-lg flex items-center justify-center">
@@ -472,7 +477,7 @@ export default function App() {
               </span>
             </h1>
 
-            <p className="text-base sm:text-lg text-neutral-300 font-light max-w-2xl leading-relaxed">
+            <p className="text-base sm:text-lg text-white font-light max-w-2xl leading-relaxed">
               YouTube tiene el conocimiento. Nosotros le pusimos <strong className="text-neon-cyan font-semibold">Inteligencia Artificial (Gemini)</strong> para que lo domines de una vez por todas. Deja de consumir pasivamente y empieza a filmar con criterio profesional.
             </p>
 
@@ -490,7 +495,7 @@ export default function App() {
               
               <a 
                 href="#simulador" 
-                className="px-8 py-4 rounded-xl text-sm font-semibold text-neutral-300 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-neon-cyan/30 text-center transition-all flex items-center justify-center gap-2"
+                className="px-8 py-4 rounded-xl text-sm font-semibold text-white bg-white/5 hover:bg-white/10 border border-white/10 hover:border-neon-cyan/30 text-center transition-all flex items-center justify-center gap-2"
               >
                 <span>Probar Demo Online</span>
                 <Smartphone className="w-4 h-4 text-neon-cyan" />
@@ -501,19 +506,19 @@ export default function App() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-6 border-t border-white/5">
               <div className="flex items-center gap-2">
                 <Check className="w-4 h-4 text-neon-cyan" />
-                <span className="text-xs text-neutral-400 font-mono">100% Gratis</span>
+                <span className="text-xs text-white font-mono">100% Gratis</span>
               </div>
               <div className="flex items-center gap-2">
                 <Check className="w-4 h-4 text-neon-purple" />
-                <span className="text-xs text-neutral-400 font-mono">Sin Tarjeta</span>
+                <span className="text-xs text-white font-mono">Sin Tarjeta</span>
               </div>
               <div className="flex items-center gap-2">
                 <Check className="w-4 h-4 text-neon-cyan" />
-                <span className="text-xs text-neutral-400 font-mono">Feedback instantáneo</span>
+                <span className="text-xs text-white font-mono">Feedback instantáneo</span>
               </div>
               <div className="flex items-center gap-2">
                 <Check className="w-4 h-4 text-neon-purple" />
-                <span className="text-xs text-neutral-400 font-mono">Contenido Curado</span>
+                <span className="text-xs text-white font-mono">Contenido Curado</span>
               </div>
             </div>
           </div>
